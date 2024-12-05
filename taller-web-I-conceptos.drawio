@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Página-1" id="YcEezH00rAIW7fIu8C1m">
+    <mxGraphModel dx="2327" dy="2018" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-1" value="Vistas (Frontend)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-2" value="Controlador" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-3" value="Servicios" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-4" value="Repositorio" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-5" value="Modelo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1121" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-6" value="Presentacion" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-7" value="Interface en dominio" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-8" value="Implementacion en infraestructura" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-9" value="" style="shape=crossbar;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="10" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-10" value="Dominio" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1151" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-11" value="webapps/WEB-INF/views/thymeleaf" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-12" value="&lt;ul&gt;&lt;li&gt;Nombrar como Controlador...&lt;/li&gt;&lt;li&gt;Agregar @Controller() arriba de la clase&lt;/li&gt;&lt;li&gt;Los controladores siempre usan el servicio NUNCA el repositorio directo&lt;/li&gt;&lt;li&gt;Hay que declarar variables con el servicio que vamos a utilizar (Interface nunca implementacion)&lt;/li&gt;&lt;li&gt;En el constructor debemos pasarle esos servicios que declaramos y arriba debemos ponerle @Autowired&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Para una nueva ruta, arriba del metodo debemos poner @RequestMapping(value= &quot;/ruta-para-ingresar&quot;, method = RequestMethod.GET)&lt;/li&gt;&lt;li&gt;Se agrega un nuevo ModelMap que es la bolsa de gatos para enviar cosas a la vista&lt;br&gt;&lt;/li&gt;&lt;li&gt;model.put ingresa cosas al modelo, tambien pueden darse llamados a servicios&lt;/li&gt;&lt;li&gt;Al final vamos a retornar un new ModelAndView(&#39;nombredelavista&#39;, modeloQueCreamosAntes)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;align=left;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="260" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-13" value="&lt;ul&gt;&lt;li&gt;Agregar una interface en la carpeta dominio con todos los metodos que vamos a usar (solo nombres y variables que devuelve y recibe)&lt;/li&gt;&lt;li&gt;Agregar una implementacion que implemente de la interface que hicimos en la carpeta infraestructura&lt;/li&gt;&lt;li&gt;Nombrar como Servicio...Impl&lt;/li&gt;&lt;li&gt;Agregar el @Service(&quot;nombreServicio&quot;) que indica que es un servicio&lt;/li&gt;&lt;li&gt;Agregar despues del service agregar el @Transactional&lt;/li&gt;&lt;li&gt;Al igual que el controlador, agregar variables con servicios o repositorios a utilizar e ingresarlos en el constructor con el @Autowired&lt;br&gt;&lt;/li&gt;&lt;li&gt;Implementar los metodos que definimos en la interface, con el @Override&lt;/li&gt;&lt;li&gt;Logica de negocio y manipulacion de datos, con llamado a repositorio&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="520" y="130" width="260" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-14" value="&lt;ul&gt;&lt;li&gt;Agregar una interface en la carpeta dominio con todos los metodos que vamos a usar (solo nombres y variables que devuelve y recibe)&lt;/li&gt;&lt;li&gt;Agregar una implementacion que implemente de la interface que hicimos en la carpeta infraestructura&lt;/li&gt;&lt;li&gt;Nombrar como Repositorio...Impl&lt;/li&gt;&lt;li&gt;Agregar el @Repository(&quot;nombreRepositorio&quot;) que indica que es un repositorio&lt;/li&gt;&lt;li&gt;Agregar despues del repositorio agregar el @Transactional&lt;/li&gt;&lt;li&gt;Agregar variable con el SessionFactory a utilizar e ingresarlos en el constructor con el @Autowired&lt;br&gt;&lt;/li&gt;&lt;li&gt;Implementar los metodos que definimos en la interface, con el @Override&lt;/li&gt;&lt;li&gt;Solo logica de base de datos&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="770" y="130" width="260" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-16" value="&lt;ul&gt;&lt;li&gt;Clases con la informacion exactamente igual a la tabla en la base&lt;/li&gt;&lt;li&gt;Tiene que tener el @Entity que le indica que puede hacer operaciones en base de datos&lt;/li&gt;&lt;li&gt;Arriba del atributo id debemos poner el @Id y el @GeneratedValue(strategy = GenerationType.IDENTITY) que le dice que es un ID y como debe guardar el mismo&lt;/li&gt;&lt;li&gt;Definir lo que va a la base de datos&lt;br&gt;&lt;/li&gt;&lt;li&gt;Se crea la base de datos y las tablas al levantar el proyecto&lt;/li&gt;&lt;li&gt;Agregar en resources/data.sql los inserts que necesitemos&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="140" width="260" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-17" value="&lt;ul&gt;&lt;li&gt;Hay que crear la vista con el nombre que definimos en el controlador + .html&lt;/li&gt;&lt;li&gt;Las operaciones de thymeleaf se agregan en los tags como th:each para iterar una lista como&amp;nbsp;&lt;br&gt;&lt;br&gt;th:each=&quot;cliente : ${clientes}&quot;&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Para acceder a informacion del modelo debemos ingresar como ${nombreModelo}&lt;br&gt;&lt;/li&gt;&lt;li&gt;Para ir a una ruta o un action en el form debemos agregar&amp;nbsp;&lt;br&gt;&lt;br&gt;th:action=&quot;@{/registrarme}&quot;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="120" width="260" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-18" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="600" as="sourcePoint" />
+            <mxPoint x="1320" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-20" value="Tests" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry y="610" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-22" value="En capa presentacion" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="640" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-23" value="En capa dominio" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="640" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-24" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="790.31" y="389.7" width="20" height="480.62" as="geometry" />
+        </mxCell>
+        <mxCell id="ZU4GmCSSWKOK-8EI7Xn7-25" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="370" y="490" width="20" height="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
